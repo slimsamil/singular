@@ -1,9 +1,6 @@
-NORDEN = 1
-SÜDEN = 2
-WESTEN = 3
-OSTEN = 4
+l = ["NORDEN", "OSTEN", "WESTEN", "SÜDEN", "WESTEN", "WESTEN", "NORDEN"]
+k = ["NORDEN", "SÜDEN"]
 
-l = [NORDEN, OSTEN, WESTEN, SÜDEN, WESTEN, WESTEN, NORDEN]
 
 def clearList(lst):
     j = 0
@@ -18,6 +15,18 @@ def clearList(lst):
 
 def formatList(lst):
     for i in range(len(lst)):
+        if lst[i] == "NORDEN":
+            lst[i] = 1
+        if lst[i] == "SÜDEN":
+            lst[i] = 2
+        if lst[i] == "WESTEN":
+            lst[i] = 3
+        if lst[i] == "OSTEN":
+            lst[i] = 4
+
+
+def deformatList(lst):
+    for i in range(len(lst)):
         if lst[i] == 1:
             lst[i] = "NORDEN"
         if lst[i] == 2:
@@ -27,6 +36,11 @@ def formatList(lst):
         if lst[i] == 4:
             lst[i] = "OSTEN"
 
-clearList(l)
 formatList(l)
+clearList(l)
+deformatList(l)
 print(l)
+formatList(k)
+clearList(k)
+deformatList(k)
+print(k)

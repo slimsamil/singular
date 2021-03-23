@@ -1,4 +1,5 @@
 l = ["NORDEN", "OSTEN", "WESTEN", "SÜDEN", "WESTEN", "WESTEN", "NORDEN"]
+k = ["NORDEN", "SÜDEN"]
 
 def clearList(l):
     j = 0
@@ -11,4 +12,6 @@ def clearList(l):
             j+=1
 
 clearList(l)
+clearList(k)
 print(l)
+print(k)
